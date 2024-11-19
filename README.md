@@ -21,12 +21,11 @@ module "cloudflare_dns_a" {
 ```
 
 <!-- BEGIN_TF_DOCS -->
-
 ## Providers
 
-| Name                                                                  | Version |
-| --------------------------------------------------------------------- | ------- |
-| <a name="provider_cloudflare"></a> [cloudflare](#provider_cloudflare) | ~>      |
+| Name | Version |
+|------|---------|
+| <a name="provider_cloudflare"></a> [cloudflare](#provider\_cloudflare) | 4.46.0 |
 
 ## Modules
 
@@ -34,22 +33,21 @@ No modules.
 
 ## Inputs
 
-| Name                                                                              | Description                                                                                     | Type     | Default | Required |
-| --------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------- | -------- | ------- | :------: |
-| <a name="input_comment"></a> [comment](#input_comment)                            | A comment to attach to the zone within the Cloudflare dashboard. Does not affect DNS responses. | `string` | `null`  |    no    |
-| <a name="input_dns_record_name"></a> [dns_record_name](#input_dns_record_name)    | The name of the name DNS record to be added.                                                    | `string` | n/a     |   yes    |
-| <a name="input_dns_record_type"></a> [dns_record_type](#input_dns_record_type)    | The type of DNS record to be altered.                                                           | `string` | `"A"`   |    no    |
-| <a name="input_dns_record_value"></a> [dns_record_value](#input_dns_record_value) | The value of the name DNS record to be added.                                                   | `string` | n/a     |   yes    |
-| <a name="input_domain"></a> [domain](#input_domain)                               | The domain for which the DNS records should be altered.                                         | `string` | n/a     |   yes    |
-| <a name="input_use_cf_proxy"></a> [use_cf_proxy](#input_use_cf_proxy)             | Whether or not to enable proxying through Cloudflare's DNS network.                             | `bool`   | `false` |    no    |
+| Name | Description | Type | Default | Required |
+|------|-------------|------|---------|:--------:|
+| <a name="input_comment"></a> [comment](#input\_comment) | A comment to attach to the zone within the Cloudflare dashboard. Does not affect DNS responses. | `string` | `null` | no |
+| <a name="input_dns_record_name"></a> [dns\_record\_name](#input\_dns\_record\_name) | The name of the name DNS record to be added. | `string` | n/a | yes |
+| <a name="input_dns_record_type"></a> [dns\_record\_type](#input\_dns\_record\_type) | The type of DNS record to be altered. | `string` | `"A"` | no |
+| <a name="input_dns_record_value"></a> [dns\_record\_value](#input\_dns\_record\_value) | The value of the name DNS record to be added. | `string` | n/a | yes |
+| <a name="input_domain"></a> [domain](#input\_domain) | The domain for which the DNS records should be altered. | `string` | n/a | yes |
+| <a name="input_use_cf_proxy"></a> [use\_cf\_proxy](#input\_use\_cf\_proxy) | Whether or not to enable proxying through Cloudflare's DNS network. | `bool` | `false` | no |
 
 ## Outputs
 
-| Name                                                           | Description                                |
-| -------------------------------------------------------------- | ------------------------------------------ |
-| <a name="output_hostname"></a> [hostname](#output_hostname)    | The FQDN of the record.                    |
-| <a name="output_proxiable"></a> [proxiable](#output_proxiable) | Whether or not this record can be proxied. |
-
+| Name | Description |
+|------|-------------|
+| <a name="output_hostname"></a> [hostname](#output\_hostname) | The FQDN of the record. |
+| <a name="output_proxiable"></a> [proxiable](#output\_proxiable) | Whether or not this record will be proxied. |
 <!-- END_TF_DOCS -->
 
 ### 🔃 Contributing
