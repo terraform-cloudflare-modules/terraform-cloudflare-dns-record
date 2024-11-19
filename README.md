@@ -26,7 +26,7 @@ module "cloudflare_dns_a" {
 
 | Name                                                                  | Version |
 | --------------------------------------------------------------------- | ------- |
-| <a name="provider_cloudflare"></a> [cloudflare](#provider_cloudflare) | ~> 4.46 |
+| <a name="provider_cloudflare"></a> [cloudflare](#provider_cloudflare) | ~>      |
 
 ## Modules
 
